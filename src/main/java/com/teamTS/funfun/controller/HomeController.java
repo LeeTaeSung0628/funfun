@@ -11,7 +11,7 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-//    @Autowired
+    @Autowired
     private TestRepository testRepository;
 
     @GetMapping("/")
@@ -23,7 +23,7 @@ public class HomeController {
     @GetMapping("/hello")
     public String HelloWorld(Model model) {
         List<TestModel> tm = testRepository.getTestData();
-        model.addAttribute("data", "Home!!");
+        model.addAttribute("data", tm.get(0).getTitle());
         return "home/homeView";
     }
 

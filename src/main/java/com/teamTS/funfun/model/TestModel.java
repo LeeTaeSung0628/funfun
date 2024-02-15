@@ -1,5 +1,6 @@
 package com.teamTS.funfun.model;
 
+
 public class TestModel {
     String title;
     String name;
